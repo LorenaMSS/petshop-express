@@ -1,0 +1,62 @@
+{
+  "pets": [
+    {
+      "nome": "Caramelo",
+      "tipo": "Cachorro",
+      "idade": 2,
+      "raca": "SRD",
+      "peso": 3,
+      "tutor": "José",
+      "contato": "(81) 99999-0000",
+      "vacinado": true,
+      "servicos": [
+        { "nome": "banho", "data": "29-03-2021" },
+        { "nome": "banho", "data": "29-03-2021" }
+      ]
+    },
+    {
+      "nome": "Kiwi",
+      "tipo": "Pássaro",
+      "idade": 3,
+      "raca": "Calopsita",
+      "peso": 0.1,
+      "tutor": "Luana",
+      "contato": "(81) 90093-7689",
+      "vacinado": true,
+      "servicos": [{ "nome": "banho", "data": "29-03-2021" }]
+    },
+    {
+      "nome": "Mimosa",
+      "tipo": "Gato",
+      "idade": 1,
+      "raca": "Persa",
+      "peso": 5,
+      "tutor": "Alana",
+      "contato": "(81) 99567-0089",
+      "vacinado": true,
+      "servicos": [{ "nome": "banho", "data": "29-03-2021" }]
+    },
+    {
+      "nome": "jujuba",
+      "tipo": "cachorro",
+      "idade": "10",
+      "raca": "Poodle",
+      "peso": "10",
+      "tutor": "José",
+      "contato": "(81) 99699-0000",
+      "vacinado": false,
+      "servicos": []
+    },
+    {
+      "nome": "Sansa",
+      "tipo": "Gato",
+      "idade": "1",
+      "raca": "SRD",
+      "peso": "2",
+      "tutor": "Ana",
+      "contato": "(81) 99699-0000",
+      "vacinado": false,
+      "servicos": []
+    }
+  ]
+}
