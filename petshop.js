@@ -12,20 +12,20 @@ const petshop = {
   },
 
   listarPets: () => {
+    let textoListaPets = 'Petshop\n';
+
     bancoDados.pets.forEach((pet) => {
       let { nome, idade, tipo, raca, vacinado, servicos } = pet;
 
-      console.log(
-        `${nome}, ${idade} anos, ${tipo}, ${raca}, ${
-          vacinado ? 'vacinado' : 'não vacinado'
-        }`
-      );
+      textoListaPets += `${nome}, ${idade} anos, ${tipo}, ${raca}, ${
+        vacinado ? 'vacinado' : 'não vacinado'
+      }\n`;
 
-      servicos.forEach((servico) => {
-        let { data, nome } = servico;
-        console.log(`${data} - ${nome}`);
+      pet.servicos.forEach((servico) => {
+        textoListaPets += `${servico.data} - ${servico.nome} \n`;
       });
     });
+    return textoListaPets;
   },
 
   contatoTutor: (pet) => {
@@ -67,13 +67,16 @@ const petshop = {
   },
 
   buscarPet: (nomePet) => {
+    let textoBuscarPet = '';
     let petEncontrado = bancoDados.pets.find((pet) => {
       return pet.nome == nomePet;
     });
 
-    return petEncontrado
-      ? petEncontrado
-      : `Nenhum pet encontrado com o nome ${nomePet}`;
+    if (petEncontrado) {
+      return (textoBuscarPet = +`${nomePet} foi encontrado!`);
+    } else {
+      return (textoBuscarPet = +`${nomePet} não foi encontrado!`);
+    }
   },
 
   vacinarPet: (pet) => {
@@ -166,16 +169,16 @@ const petshop = {
     console.log('Tchau, até mais!');
   },
 
-  adicionarPet: (...novoPet) => {
-    novoPet.forEach((pet) => {
-      bancoDados.pets.push(pet);
+  adicionarPets: (...novospets) => {
+    let textoAddPets = 'Adicionando PET';
+    novospets.forEach((novopet) => {
+      bancoDados.pets.push(novopet);
     });
 
-    atualizaBanco();
-    novoPet.forEach((pet) => {
-      console.log(`${pet.nome} foi adicionado com sucesso!`);
+    novospets.forEach((pet) => {
+      textoAddPets += `${pet.nome} foi adicionado com sucesso!`;
     });
   },
 };
 
-module.export = petshop;
+module.exports = petshop;
